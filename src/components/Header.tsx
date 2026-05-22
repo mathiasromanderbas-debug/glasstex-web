@@ -54,7 +54,7 @@ export default function Header() {
               <img
                 src={isScrolled ? '/logo-glasstex.png' : '/logo-glasstex-white.png'}
                 alt="Glasstex"
-                className="h-8 w-auto transition-opacity duration-300"
+                className="h-10 w-auto transition-opacity duration-300"
               />
             </a>
 

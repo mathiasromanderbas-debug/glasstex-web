@@ -35,7 +35,7 @@ export default function Footer() {
               <img
                 src="/logo-glasstex-white.png"
                 alt="Glasstex"
-                className="h-8 w-auto"
+                className="h-10 w-auto"
               />
             </div>
             <p className="text-graphite-400 text-sm leading-relaxed mb-6">

@@ -15,6 +15,7 @@ import ContactCTA from '@/components/ContactCTA'
 import ContactSection from '@/components/ContactSection'
 import Footer from '@/components/Footer'
 import WhatsAppButton from '@/components/WhatsAppButton'
+import SectionDivider from '@/components/SectionDivider'
 
 export default function Home() {
   // Scroll reveal effect
@@ -41,15 +42,38 @@ export default function Home() {
     <main className="min-h-screen">
       <Header />
       <Hero />
+
+      {/* light bg → light divider */}
+      <SectionDivider variant="light" />
       <SegmentSelector />
+
+      <SectionDivider variant="light" />
       <CapabilitiesGrid />
+
+      <SectionDivider variant="light" />
       <SolutionsSection />
+
+      {/* dark section — divider oscuro antes y después */}
+      <SectionDivider variant="light" />
       <GlassOrderProSection />
+      <SectionDivider variant="dark" />
+
       <ModularProductsSection />
+
+      <SectionDivider variant="light" />
       <ProjectsSection />
+
+      <SectionDivider variant="light" />
       <ProcessTimeline />
+
+      <SectionDivider variant="light" />
       <DifferentialsSection />
+
+      {/* dark section */}
+      <SectionDivider variant="light" />
       <ContactCTA />
+      <SectionDivider variant="dark" />
+
       <ContactSection />
       <Footer />
       <WhatsAppButton />
