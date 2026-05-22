@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { Menu, X, ChevronDown } from 'lucide-react'
+import GlasstexLogo from './GlasstexLogo'
 
 const navLinks = [
   { label: 'Soluciones', href: '#soluciones' },
@@ -50,13 +51,9 @@ export default function Header() {
               className="flex items-center group"
               onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }) }}
             >
-              {/* Logo blanco para hero oscuro, logo negro para header scrolled */}
-              <img
-                src="/logo-glasstex.svg"
-                alt="Glasstex"
-                className={`h-8 w-auto transition-all duration-300 ${
-                  isScrolled ? 'brightness-0' : 'brightness-0 invert'
-                }`}
+              <GlasstexLogo
+                variant={isScrolled ? 'light' : 'dark'}
+                height={30}
               />
             </a>
 

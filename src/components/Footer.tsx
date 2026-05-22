@@ -1,6 +1,7 @@
 'use client'
 
 import { Mail, MapPin, Instagram, Linkedin, ExternalLink } from 'lucide-react'
+import GlasstexLogo from './GlasstexLogo'
 
 const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '595983471820'
 const WHATSAPP_DEFAULT = `https://wa.me/${WHATSAPP_NUMBER}?text=Hola%20Glasstex%2C%20quiero%20obtener%20m%C3%A1s%20informaci%C3%B3n.`
@@ -31,12 +32,8 @@ export default function Footer() {
 
           {/* Column 1: Brand */}
           <div className="lg:col-span-1">
-            <div className="flex items-center mb-5">
-              <img
-                src="/logo-glasstex.svg"
-                alt="Glasstex"
-                className="h-8 w-auto brightness-0 invert"
-              />
+            <div className="mb-5">
+              <GlasstexLogo variant="dark" height={28} />
             </div>
             <p className="text-graphite-400 text-sm leading-relaxed mb-6">
               Soluciones integrales en aluminio y vidrio para obras residenciales, comerciales y corporativas. Paraguay.
