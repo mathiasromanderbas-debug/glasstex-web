@@ -23,6 +23,13 @@ export const metadata: Metadata = {
   authors: [{ name: 'Glasstex' }],
   creator: 'Glasstex',
   publisher: 'Glasstex',
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+    ],
+    shortcut: '/favicon.svg',
+    apple: '/favicon.svg',
+  },
   robots: {
     index: true,
     follow: true,

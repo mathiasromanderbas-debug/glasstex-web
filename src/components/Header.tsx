@@ -47,24 +47,17 @@ export default function Header() {
             {/* Logo */}
             <a
               href="#"
-              className="flex items-center gap-2 group"
+              className="flex items-center group"
               onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }) }}
             >
-              <div className="flex items-center gap-2">
-                <div className="w-8 h-8 bg-glass-600 rounded-lg flex items-center justify-center shadow-glass">
-                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="1" y="1" width="7" height="7" rx="1" fill="white" fillOpacity="0.9"/>
-                    <rect x="10" y="1" width="7" height="7" rx="1" fill="white" fillOpacity="0.5"/>
-                    <rect x="1" y="10" width="7" height="7" rx="1" fill="white" fillOpacity="0.5"/>
-                    <rect x="10" y="10" width="7" height="7" rx="1" fill="white" fillOpacity="0.9"/>
-                  </svg>
-                </div>
-                <span className={`text-lg font-bold tracking-tight transition-colors ${
-                  isScrolled ? 'text-graphite-900' : 'text-white'
-                }`}>
-                  GLASSTEX
-                </span>
-              </div>
+              {/* Logo blanco para hero oscuro, logo negro para header scrolled */}
+              <img
+                src="/logo-glasstex.svg"
+                alt="Glasstex"
+                className={`h-8 w-auto transition-all duration-300 ${
+                  isScrolled ? 'brightness-0' : 'brightness-0 invert'
+                }`}
+              />
             </a>
 
             {/* Desktop navigation */}

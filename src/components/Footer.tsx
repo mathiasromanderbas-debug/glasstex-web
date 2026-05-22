@@ -31,16 +31,12 @@ export default function Footer() {
 
           {/* Column 1: Brand */}
           <div className="lg:col-span-1">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-glass-600 rounded-lg flex items-center justify-center">
-                <svg width="16" height="16" viewBox="0 0 18 18" fill="none">
-                  <rect x="1" y="1" width="7" height="7" rx="1" fill="white" fillOpacity="0.9"/>
-                  <rect x="10" y="1" width="7" height="7" rx="1" fill="white" fillOpacity="0.5"/>
-                  <rect x="1" y="10" width="7" height="7" rx="1" fill="white" fillOpacity="0.5"/>
-                  <rect x="10" y="10" width="7" height="7" rx="1" fill="white" fillOpacity="0.9"/>
-                </svg>
-              </div>
-              <span className="font-bold text-white text-lg tracking-tight">GLASSTEX</span>
+            <div className="flex items-center mb-5">
+              <img
+                src="/logo-glasstex.svg"
+                alt="Glasstex"
+                className="h-8 w-auto brightness-0 invert"
+              />
             </div>
             <p className="text-graphite-400 text-sm leading-relaxed mb-6">
               Soluciones integrales en aluminio y vidrio para obras residenciales, comerciales y corporativas. Paraguay.
