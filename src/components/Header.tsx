@@ -11,8 +11,7 @@ const navLinks = [
   { label: 'Contacto', href: '#contacto' },
 ]
 
-const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '595983471820'
-const WHATSAPP_PROFESSIONAL = `https://wa.me/${WHATSAPP_NUMBER}?text=Hola%20Glasstex%2C%20quiero%20solicitar%20acceso%20a%20GlassOrderPro%20como%20profesional%20del%20rubro.`
+const GOP_URL = '/glassoorderpro'
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -77,9 +76,7 @@ export default function Header() {
             {/* CTAs */}
             <div className="hidden lg:flex items-center gap-3">
               <a
-                href={WHATSAPP_PROFESSIONAL}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={GOP_URL}
                 className={`px-4 py-2 rounded-lg text-sm font-medium border transition-all ${
                   isScrolled
                     ? 'border-graphite-300 text-graphite-700 hover:border-glass-600 hover:text-glass-600'
@@ -156,9 +153,7 @@ export default function Header() {
 
           <div className="px-6 pb-6 flex flex-col gap-3 border-t border-graphite-100 pt-4">
             <a
-              href={WHATSAPP_PROFESSIONAL}
-              target="_blank"
-              rel="noopener noreferrer"
+              href={GOP_URL}
               className="w-full px-4 py-3 rounded-xl text-sm font-medium border border-graphite-300 text-graphite-700 text-center hover:border-glass-600 hover:text-glass-600 transition-colors"
             >
               Acceso profesionales

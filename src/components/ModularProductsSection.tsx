@@ -36,7 +36,7 @@ export default function ModularProductsSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="reveal text-center mb-16">
           {/* VitraLink badge */}
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-teal-200 bg-teal-50 mb-4">
             <div className="w-4 h-4 rounded flex items-center justify-center bg-teal-600">

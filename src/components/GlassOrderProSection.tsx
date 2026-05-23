@@ -5,8 +5,6 @@ import {
   History, Activity, FileCheck, UserCheck, Bell, RadioTower, Lock, ArrowRight, CheckCircle,
 } from 'lucide-react'
 
-const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '595983471820'
-const WHATSAPP_GOP = `https://wa.me/${WHATSAPP_NUMBER}?text=Hola%20Glasstex%2C%20quiero%20solicitar%20acceso%20a%20GlassOrderPro%20como%20profesional%20del%20rubro.`
 
 const features = [
   { icon: Package, label: 'Pedido de vidrios por pieza', desc: 'Configuración de medidas, espesor y tipo.' },
@@ -99,9 +97,7 @@ export default function GlassOrderProSection() {
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-3">
               <a
-                href={WHATSAPP_GOP}
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/glassoorderpro"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-glass-600 text-white font-semibold hover:bg-glass-500 transition-all shadow-glass-md group"
               >
                 Solicitar acceso profesional

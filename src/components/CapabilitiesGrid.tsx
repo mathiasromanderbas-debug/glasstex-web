@@ -17,7 +17,7 @@ export default function CapabilitiesGrid() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Header */}
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-16">
+        <div className="reveal flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-16">
           <div>
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-glass-200 bg-glass-50 mb-4">
               <span className="text-glass-600 text-xs font-semibold tracking-wide uppercase">Capacidades industriales</span>

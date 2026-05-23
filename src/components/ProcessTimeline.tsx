@@ -13,7 +13,7 @@ export default function ProcessTimeline() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="reveal text-center mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-glass-200 bg-glass-50 mb-4">
             <span className="text-glass-600 text-xs font-semibold tracking-wide uppercase">Proceso y trazabilidad</span>
           </div>

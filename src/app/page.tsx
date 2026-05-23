@@ -16,6 +16,7 @@ import ContactSection from '@/components/ContactSection'
 import Footer from '@/components/Footer'
 import WhatsAppButton from '@/components/WhatsAppButton'
 import SectionDivider from '@/components/SectionDivider'
+import FacilityStrip from '@/components/FacilityStrip'
 
 export default function Home() {
   // Scroll reveal effect
@@ -52,6 +53,9 @@ export default function Home() {
 
       <SectionDivider variant="light" />
       <SolutionsSection />
+
+      {/* Facility strip — dark bg */}
+      <FacilityStrip />
 
       {/* dark section — divider oscuro antes y después */}
       <SectionDivider variant="light" />
