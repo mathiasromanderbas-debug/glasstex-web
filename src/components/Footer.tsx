@@ -10,7 +10,7 @@ const navLinks = [
   { label: 'Soluciones', href: '#soluciones' },
   { label: 'Obras', href: '#obras' },
   { label: 'GlassOrderPro', href: '#glassoorderpro' },
-  { label: 'Productos modulares', href: '#modulares' },
+  { label: 'Nosotros', href: '#diferenciales' },
   { label: 'Contacto', href: '#contacto' },
 ]
 

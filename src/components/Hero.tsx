@@ -1,23 +1,46 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { ArrowRight, Upload, Wrench, ChevronDown, Shield, Layers, Building2, AlignJustify, Monitor } from 'lucide-react'
+import { ArrowRight, Upload, Wrench, Cog, Factory, HardHat } from 'lucide-react'
 
 const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '595983471820'
 const WHATSAPP_COTIZACION = `https://wa.me/${WHATSAPP_NUMBER}?text=Hola%20Glasstex%2C%20quiero%20solicitar%20una%20cotizaci%C3%B3n%20para%20un%20proyecto%20de%20aluminio%20y%20vidrio.`
 
-const floatingCards = [
-  { icon: Shield, label: 'Vidrio templado', sublabel: 'Seguridad estructural', color: 'bg-glass-50 border-glass-200' },
-  { icon: Layers, label: 'DVH', sublabel: 'Aislación premium', color: 'bg-graphite-50 border-graphite-200' },
-  { icon: Building2, label: 'Fachadas', sublabel: 'Curtain wall', color: 'bg-glass-50 border-glass-200' },
-  { icon: AlignJustify, label: 'Perfiles Al.', sublabel: 'Producción propia', color: 'bg-graphite-50 border-graphite-200' },
-  { icon: Monitor, label: 'Pedidos digitales', sublabel: 'GlassOrderPro', color: 'bg-glass-50 border-glass-200' },
+const pillars = [
+  {
+    icon: Cog,
+    title: 'Ingeniería',
+    description: 'Relevamiento técnico, memoria descriptiva, planos y validación estructural para cada proyecto.',
+    accent: 'from-glass-600/20 to-glass-600/5',
+    border: 'border-glass-600/30',
+    iconBg: 'bg-glass-600/20',
+    iconColor: 'text-glass-400',
+  },
+  {
+    icon: Factory,
+    title: 'Fabricación',
+    description: 'Producción propia de aberturas, perfiles de aluminio, vidrio templado, DVH y laminado.',
+    accent: 'from-white/8 to-white/3',
+    border: 'border-white/10',
+    iconBg: 'bg-white/10',
+    iconColor: 'text-graphite-300',
+  },
+  {
+    icon: HardHat,
+    title: 'Instalación',
+    description: 'Equipos técnicos especializados en obra, con seguimiento, control de calidad y postventa.',
+    accent: 'from-glass-600/15 to-glass-600/3',
+    border: 'border-glass-600/20',
+    iconBg: 'bg-glass-600/15',
+    iconColor: 'text-glass-300',
+  },
 ]
 
 const stats = [
-  { value: '15+', label: 'Años de experiencia' },
-  { value: '500+', label: 'Proyectos instalados' },
-  { value: '100%', label: 'Producción nacional' },
+  { value: '+120.000', label: 'm²/año de vidrio' },
+  { value: '+200 tn', label: 'de aluminio/mes' },
+  { value: '15+', label: 'años en el rubro' },
+  { value: 'PY → Región', label: 'alcance de proyectos' },
 ]
 
 export default function Hero() {
@@ -83,16 +106,14 @@ export default function Hero() {
             {/* Heading */}
             <div className="flex flex-col gap-4">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.08] tracking-tight">
-                Aluminio y vidrio{' '}
+                Soluciones en vidrio y aluminio{' '}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-glass-300 to-glass-500">
-                  para obras
-                </span>{' '}
-                que exigen precisión.
+                  para la arquitectura contemporánea.
+                </span>
               </h1>
               <p className="text-graphite-300 text-lg sm:text-xl leading-relaxed max-w-xl">
-                Diseñamos, fabricamos e instalamos soluciones arquitectónicas en aluminio y vidrio para proyectos
-                residenciales, comerciales y corporativos, integrando producción industrial, ingeniería técnica
-                y tecnología digital.
+                Ingeniería, fabricación e instalación en una misma cadena. Proyectos residenciales, comerciales
+                y corporativos con producción industrial propia y tecnología digital integrada.
               </p>
             </div>
 
@@ -122,73 +143,55 @@ export default function Hero() {
             </div>
 
             {/* Stats */}
-            <div className="flex items-center gap-6 pt-2">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-2 border-t border-white/10">
               {stats.map((stat, i) => (
                 <div key={i} className="flex flex-col gap-0.5">
-                  <span className="text-2xl font-bold text-white">{stat.value}</span>
-                  <span className="text-xs text-graphite-400">{stat.label}</span>
+                  <span className="text-xl sm:text-2xl font-bold text-white leading-none">{stat.value}</span>
+                  <span className="text-xs text-graphite-400 mt-1">{stat.label}</span>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* Right: Floating cards grid */}
+          {/* Right: 3 Pillars */}
           <div
-            className={`hidden lg:flex flex-col gap-4 items-end transition-all duration-700 delay-200 ${
+            className={`hidden lg:flex flex-col gap-4 transition-all duration-700 delay-200 ${
               mounted ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'
             }`}
           >
-            {/* Main visual card */}
-            <div className="w-full max-w-sm bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 shadow-glass-lg">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-xl bg-glass-600 flex items-center justify-center">
-                  <Building2 size={18} className="text-white" />
-                </div>
-                <div>
-                  <div className="text-white font-semibold text-sm">Fachada vidriada</div>
-                  <div className="text-graphite-400 text-xs">Curtain wall · DVH · Aluminio</div>
-                </div>
-              </div>
-              <div className="grid grid-cols-3 gap-2 mb-4">
-                {[
-                  { label: 'Temple', pct: '100%', c: 'bg-glass-600' },
-                  { label: 'Aislación', pct: '95%', c: 'bg-glass-500' },
-                  { label: 'Precisión', pct: '99%', c: 'bg-glass-400' },
-                ].map((item) => (
-                  <div key={item.label} className="flex flex-col gap-1.5">
-                    <div className="text-graphite-400 text-xs">{item.label}</div>
-                    <div className="h-1 bg-white/10 rounded-full overflow-hidden">
-                      <div className={`h-full ${item.c} rounded-full`} style={{ width: item.pct }} />
-                    </div>
-                    <div className="text-white text-xs font-medium">{item.pct}</div>
-                  </div>
-                ))}
-              </div>
-              <div className="flex items-center gap-2 pt-2 border-t border-white/10">
-                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                <span className="text-graphite-300 text-xs">Producción en planta · Paraguay</span>
-              </div>
+            {/* Label */}
+            <div className="flex items-center gap-3">
+              <div className="h-px flex-1 bg-white/10" />
+              <span className="text-graphite-500 text-xs font-medium uppercase tracking-widest">Cadena de valor</span>
+              <div className="h-px flex-1 bg-white/10" />
             </div>
 
-            {/* Mini floating capability cards */}
-            <div className="grid grid-cols-2 gap-3 w-full max-w-sm">
-              {floatingCards.map((card, i) => (
-                <div
-                  key={i}
-                  className={`flex items-center gap-3 px-4 py-3 rounded-xl bg-white/5 backdrop-blur-md border border-white/10 hover:border-glass-600/40 transition-all cursor-default ${
-                    i === 4 ? 'col-span-2' : ''
-                  }`}
-                  style={{ animationDelay: `${i * 150}ms` }}
-                >
-                  <div className="w-8 h-8 rounded-lg bg-glass-600/20 flex items-center justify-center flex-shrink-0">
-                    <card.icon size={15} className="text-glass-400" />
-                  </div>
-                  <div>
-                    <div className="text-white text-xs font-semibold">{card.label}</div>
-                    <div className="text-graphite-500 text-xs">{card.sublabel}</div>
-                  </div>
+            {/* Pillar cards */}
+            {pillars.map((pillar, i) => (
+              <div
+                key={pillar.title}
+                className={`relative flex items-start gap-5 p-6 rounded-2xl bg-gradient-to-br ${pillar.accent} backdrop-blur-md border ${pillar.border} transition-all duration-300 hover:border-glass-600/50 group`}
+                style={{ transitionDelay: `${i * 80}ms` }}
+              >
+                {/* Número de paso */}
+                <div className="absolute top-4 right-5 text-graphite-700 text-xs font-mono">
+                  0{i + 1}
                 </div>
-              ))}
+
+                <div className={`w-11 h-11 rounded-xl ${pillar.iconBg} flex items-center justify-center flex-shrink-0 mt-0.5`}>
+                  <pillar.icon size={20} className={pillar.iconColor} />
+                </div>
+                <div className="flex flex-col gap-1.5 pr-6">
+                  <h3 className="text-white font-semibold text-base">{pillar.title}</h3>
+                  <p className="text-graphite-400 text-sm leading-relaxed">{pillar.description}</p>
+                </div>
+              </div>
+            ))}
+
+            {/* Bottom tag */}
+            <div className="flex items-center justify-end gap-2 pt-1">
+              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+              <span className="text-graphite-500 text-xs">Producción 100% propia · Asunción, Paraguay</span>
             </div>
           </div>
         </div>

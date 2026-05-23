@@ -7,8 +7,7 @@ const navLinks = [
   { label: 'Soluciones', href: '#soluciones' },
   { label: 'Obras', href: '#obras' },
   { label: 'GlassOrderPro', href: '#glassoorderpro' },
-  { label: 'Productos modulares', href: '#modulares' },
-  { label: 'Tecnología', href: '#proceso' },
+  { label: 'Nosotros', href: '#diferenciales' },
   { label: 'Contacto', href: '#contacto' },
 ]
 
