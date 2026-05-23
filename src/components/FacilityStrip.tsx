@@ -7,9 +7,13 @@ const facilityPhotos = [
   { src: '/fabrica/fabrica-1.jpg', label: 'Planta de producción', category: 'Fábrica' },
   { src: '/fabrica/fabrica-2.jpg', label: 'Procesamiento de vidrio', category: 'Fábrica' },
   { src: '/fabrica/fabrica-3.jpg', label: 'Línea de producción', category: 'Fábrica' },
+  { src: '/fabrica/fabrica-4.jpg', label: 'Área de corte', category: 'Fábrica' },
+  { src: '/fabrica/fabrica-5.jpg', label: 'Control de calidad', category: 'Fábrica' },
+  { src: '/fabrica/fabrica-6.jpg', label: 'Almacén de perfiles', category: 'Fábrica' },
   { src: '/fabrica/instalacion-1.jpg', label: 'Instalación en obra', category: 'Instalación' },
   { src: '/fabrica/instalacion-2.jpg', label: 'Equipo técnico en obra', category: 'Instalación' },
   { src: '/fabrica/instalacion-3.jpg', label: 'Montaje de sistema', category: 'Instalación' },
+  { src: '/fabrica/instalacion-4.jpg', label: 'Cerramiento en altura', category: 'Instalación' },
 ]
 
 function Photo({ src, label, category }: { src: string; label: string; category: string }) {

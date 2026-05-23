@@ -41,7 +41,7 @@ export default function Header() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16 lg:h-18">
+          <div className="flex items-center justify-between h-20 lg:h-22">
             {/* Logo */}
             <a
               href="#"
@@ -52,7 +52,7 @@ export default function Header() {
               <img
                 src={isScrolled ? '/logo-glasstex.png' : '/logo-glasstex-white.png'}
                 alt="Glasstex"
-                className="h-10 w-auto transition-opacity duration-300"
+                className="h-14 w-auto transition-opacity duration-300"
               />
             </a>
 
