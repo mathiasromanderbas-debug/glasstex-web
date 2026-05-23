@@ -1,6 +1,6 @@
 'use client'
 
-import { MessageCircle, Upload } from 'lucide-react'
+import { MessageCircle, Building2, Lock, Package } from 'lucide-react'
 import ContactForm from './ContactForm'
 
 const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '595983471820'
@@ -11,17 +11,17 @@ const WHATSAPP_GOP = `https://wa.me/${WHATSAPP_NUMBER}?text=Hola%20Glasstex%2C%2
 const whatsappShortcuts = [
   {
     label: 'Cotización de obra',
-    icon: '🏛️',
+    Icon: Building2,
     href: WHATSAPP_COTIZACION,
   },
   {
     label: 'Acceso GlassOrderPro',
-    icon: '🔐',
+    Icon: Lock,
     href: WHATSAPP_GOP,
   },
   {
     label: 'Productos modulares',
-    icon: '📦',
+    Icon: Package,
     href: WHATSAPP_MODULAR,
   },
 ]
@@ -63,7 +63,9 @@ export default function ContactSection() {
                     rel="noopener noreferrer"
                     className="flex items-center gap-3 p-3 rounded-xl border border-graphite-200 hover:border-[#25D366]/60 hover:bg-[#25D366]/5 transition-all group"
                   >
-                    <span className="text-xl flex-shrink-0">{shortcut.icon}</span>
+                    <div className="w-8 h-8 rounded-lg bg-glass-50 border border-glass-100 flex items-center justify-center flex-shrink-0 group-hover:bg-[#25D366]/10 group-hover:border-[#25D366]/30 transition-all">
+                      <shortcut.Icon size={15} className="text-glass-600 group-hover:text-[#25D366] transition-colors" />
+                    </div>
                     <span className="text-sm font-medium text-graphite-700 group-hover:text-graphite-900 transition-colors">
                       {shortcut.label}
                     </span>

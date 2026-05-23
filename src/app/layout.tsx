@@ -88,7 +88,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
           rel="stylesheet"
         />
         {/* Structured data */}
@@ -97,21 +97,43 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               '@context': 'https://schema.org',
-              '@type': 'Organization',
+              '@type': 'LocalBusiness',
+              '@id': 'https://glasstex.com.py/#organization',
               name: 'Glasstex',
               url: 'https://glasstex.com.py',
-              logo: 'https://glasstex.com.py/logo.png',
+              logo: 'https://glasstex.com.py/logo-glasstex.png',
+              image: 'https://glasstex.com.py/og-image.jpg',
               description:
-                'Soluciones integrales en aluminio y vidrio para obras residenciales, comerciales y corporativas en Paraguay.',
+                'Soluciones integrales en aluminio y vidrio para obras residenciales, comerciales y corporativas en Paraguay. Fabricación, provisión e instalación de fachadas, aberturas, DVH, vidrio templado, laminado, barandas y mamparas.',
               address: {
                 '@type': 'PostalAddress',
                 addressLocality: 'Asunción',
+                addressRegion: 'Central',
                 addressCountry: 'PY',
               },
-              contactPoint: {
-                '@type': 'ContactPoint',
-                contactType: 'customer service',
-                availableLanguage: 'Spanish',
+              geo: {
+                '@type': 'GeoCoordinates',
+                latitude: -25.2867,
+                longitude: -57.647,
+              },
+              contactPoint: [
+                {
+                  '@type': 'ContactPoint',
+                  contactType: 'customer service',
+                  telephone: '+595983471820',
+                  availableLanguage: 'Spanish',
+                },
+              ],
+              hasOfferCatalog: {
+                '@type': 'OfferCatalog',
+                name: 'Soluciones en aluminio y vidrio',
+                itemListElement: [
+                  { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Fachadas vidriadas' } },
+                  { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Aberturas de aluminio' } },
+                  { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Vidrio templado y DVH' } },
+                  { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Barandas y mamparas' } },
+                  { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'GlassOrderPro B2B' } },
+                ],
               },
               sameAs: [
                 'https://instagram.com/glasstex',
