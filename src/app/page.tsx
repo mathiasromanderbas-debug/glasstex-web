@@ -17,6 +17,7 @@ import Footer from '@/components/Footer'
 import WhatsAppButton from '@/components/WhatsAppButton'
 import SectionDivider from '@/components/SectionDivider'
 import FacilityStrip from '@/components/FacilityStrip'
+import ProToolsSection from '@/components/ProToolsSection'
 
 export default function Home() {
   // Scroll reveal effect
@@ -61,6 +62,9 @@ export default function Home() {
       <SectionDivider variant="light" />
       <GlassOrderProSection />
       <SectionDivider variant="dark" />
+
+      <ProToolsSection />
+      <SectionDivider variant="light" />
 
       <ModularProductsSection />
 
